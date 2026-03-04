@@ -14,17 +14,19 @@
 <body>
    <main>
       <h1>Descubra A Palavra</h1>
-      <div id="palavra oculta" class="palavra-container">
-         <span>_</span><span>_<span>_</span><span>_</span><span>_</span><span>_</span>
-      </div>
+
       <section class="controles">
 
          <input type="text" id="entrada-letra" placeholder="Letra" maxlength="1">
          <button type="submit">Enviar</button>
       </section>
       <section class="status">
+         <div id="palavra oculta" class="palavra-container">
+            <span>_</span><span>_<span>_</span><span>_</span><span>_</span><span>_</span>
+         </div>
          <p>Tentativas restantes: <span id="Tentativas">6</span></p>
          <p>Pontuação:<span id="pontuacao">0</span></p>
+
          <p>Letras usadas:<span id="letra-usada"></span></p>
       </section>
    </main>
