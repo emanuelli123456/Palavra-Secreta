@@ -1,12 +1,17 @@
-h1{
-color: brown;
+.comeco{
+color: palevioletred;
 font-family:amoria;
-height: 15vh;
+height: 20vh;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 background: radial-gradient(circle at top,#3c00bf,#050510);
-border-radius: 55px;
+border-radius: 60px;
+border: 1px solid violet;
+padding: 20px;
+margin: 20px;
+
 }
 body{
     background-color: indigo;
@@ -16,9 +21,16 @@ body{
     align-items:center;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    cursor: grab
+    cursor: grab;
+
 }
 
+input{
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+
+}
 .palavra-container span{
     font-size: 2rem;
     margin: 0 10px;
@@ -27,20 +39,23 @@ body{
 }
 #btn-tentar{
     padding: 10px 20px;
-    cursor: wait ;
+    cursor: wait;
+
     transition: 0.3s;
 
 }
 #btn-tentar:hover{
     background-color: magenta;
     color: white;
-
+ 
 }
 
 #entrada-Letra:focus{
     border: 2px solid cyan;
     outline: none;
+
 }
+
 
 
 
