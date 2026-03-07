@@ -10,10 +10,12 @@ de lógica de porgramação, manipulação de DOM e organização de código em 
 
 
 1) Como organizamos nosso projeto?
-
+   Comecei pelo html, procurei videos sobre a estrutura e também apliquei o que foi explicado em sala;
+   Depois utilizei o css procurando relmbrar os ensinos passados(como os professores anteriores), e juntando como os seus ensinamentos.
+   
 2) O que foi mais difícil no layout?
+A parte da conexão entre o html e o css, mas mais dificuldade nas estruturas do html.
 
 3) Nossa interface está preparada para receber JavaScript? Por quê?
-
+sim, mas ainda precisa de ajuste na parte do html porque ficará muito confuso
  
-✅ Dica: use commits pequenos e mensagens claras (ex.: feat: cria estrutura base do layout) 🚀
