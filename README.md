@@ -19,3 +19,4 @@ A parte da conexão entre o html e o css, mas mais dificuldade nas estruturas do
 3) Nossa interface está preparada para receber JavaScript? Por quê?
 sim, mas ainda precisa de ajuste na parte do html porque ficará muito confuso
  
+
