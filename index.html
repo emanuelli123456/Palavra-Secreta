@@ -1,38 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Palavra Secreta</title>
-   <link rel="stylesheet" href="style.css">
 
-   <title>Palavra Secreta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Palavra Secreta</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-   <main>
-      <section class="comeco">
-            <h1>Descubra A Palavra</h1>
-            <input type="text" id="entrada-palavra" placeholder="Palavra secreta">
-            <button type="submit">Enviar</button>
-      </section>
-     
-      <section class="controles">
-         <input type="text" id="entrada-letra" placeholder="Letra" maxlength="1">
-         <button type="submit">Enviar</button>
-      </section>
-      <section class="status">
-         <div id="palavra oculta" class="palavra-container">
-            <span>_</span><span>_<span>_</span><span>_</span><span>_</span><span>_</span>
-         </div>
-         <p>Tentativas restantes: <span id="Tentativas">6</span></p>
-         <p>Pontuação:<span id="pontuacao">0</span></p>
 
-         <p>Letras usadas:<span id="letra-usada"></span></p>
-      </section>
-   </main>
+<main>
+
+<section class="comeco">
+
+<h1>Descubra A Palavra</h1>
+
+<input type="password" id="entrada-palavra" placeholder="Palavra secreta">
+
+
+<button id="btn-comecar">Começar</button>
+
+</section>
+
+
+<section class="status">
+
+<section id="areaSegredo">
+
+<label>Digite a Palavra Secreta</label>
+
+<br><br>
+
+<section id="areaJogo"></section>
+
+</section>
+
+
+<div class="input-area">
+
+<input type="text" id="tentativa" maxlength="1" placeholder="Letra">
+
+<button id="btn-tentar">Enviar</button>
+
+</div>
+
+
+<div class="info">
+
+<p>Tentativas restantes: <span id="Tentativas">6</span></p>
+
+<p>Pontuação: <span id="pontuação">0</span></p>
+
+<p>Letras usadas: <span id="letra-usada"></span></p>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
