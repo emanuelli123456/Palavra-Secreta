@@ -42,6 +42,7 @@ renderWord();
 }
 
 
+
 // MOSTRAR PALAVRA
 function renderWord(){
 
