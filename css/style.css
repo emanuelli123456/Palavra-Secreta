@@ -1,73 +1,74 @@
 .comeco{
-color: palevioletred;
-font-family:amoria;
-height: 20vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: radial-gradient(circle at top,#3c00bf,#050510);
-border-radius: 60px;
-/* --- O EFEITO NEON AQUI --- */
-border: 2px solid #bd7fbb; /* Cor base da borda (ciano neon) */
-    
-box-shadow: 
-    0 0 10px #a94cf0,      /* Brilho interno/próximo */
-    0 0 20px #a94cf0,      /* Brilho médio */
-    0 0 40px #7000ff,      /* Brilho expandido (puxando para o roxo) */
-    inset 0 0 15px #7000ff; /* Brilho neon para DENTRO da caixa */
-padding: 20px;
-margin: 20px;
-
-
-}
-body{
-    background-color: indigo;
-    color: aquamarine;
-    display:  flex;
+    color: palevioletred;
+    font-family:amoria;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    cursor: grab;
-box-shadow: 
-00 15px  purple,
-00 30px white,
-00 60px green;
-
-}
-
-input{
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-
-}
-.palavra-container span{
-    font-size: 2rem;
-    margin: 0 10px;
-    border-bottom:purple;
-
-}
-#btn-tentar{
-    padding: 10px 20px;
-    cursor: wait;
-
-    transition: 0.3s;
-
-}
-#btn-tentar:hover{
-    background-color: magenta;
-    color: white;
- 
-}
-
-#entrada-letra:focus{
-    border: 2px solid cyan;
-    outline: none;
-
-}
-
-
-
-
+    align-items: center;
+    background: radial-gradient(circle at top,#3c00bf,#050510);
+    border-radius: 60px;
+    /* --- O EFEITO NEON AQUI --- */
+    border: 2px solid #bd7fbb; /* Cor base da borda (ciano neon) */
+        
+    box-shadow: 
+        0 0 10px #a94cf0,      /* Brilho interno/próximo */
+        0 0 20px #a94cf0,      /* Brilho médio */
+        0 0 40px #7000ff,      /* Brilho expandido (puxando para o roxo) */
+        inset 0 0 15px #7000ff; /* Brilho neon para DENTRO da caixa */
+    padding: 20px;
+    margin: 20px;
+    
+    
+    }
+    body{
+        background-color: indigo;
+        color: aquamarine;
+        display:  flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        cursor: grab;
+    box-shadow: 
+    00 15px  purple,
+    00 30px white,
+    00 60px green;
+    
+    }
+    
+    input{
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+    
+    }
+    .palavra-container span{
+        font-size: 2rem;
+        margin: 0 10px;
+        border-bottom:purple;
+    
+    }
+    #btn-tentar{
+        padding: 10px 20px;
+        cursor: wait;
+    
+        transition: 0.3s;
+    
+    }
+    #btn-tentar:hover{
+        background-color: magenta;
+        color: white;
+     
+    }
+    
+    #entrada-letra:focus{
+        border: 2px solid cyan;
+        outline: none;
+    
+    }
+    
+    
+    
+    
+    
