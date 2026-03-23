@@ -1,74 +1,148 @@
-.comeco{
+/* ===========================
+   RESET BÁSICO
+   =========================== */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   BODY
+   =========================== */
+body {
+    background-color: indigo;
+    color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* CORREÇÃO 1: era height:100vh — com conteúdo grande a página
+                          cortava. min-height garante que cresce conforme o conteúdo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: grab;
+
+    /* CORREÇÃO 2: box-shadow do body estava com "00" em vez de "0 0"
+       e as cores (purple/white/green) não fazem sentido em sombra de body.
+       Substituído por um brilho sutil em torno da tela */
+    box-shadow:
+        inset 0 0 60px rgba(112, 0, 255, 0.4),
+        inset 0 0 120px rgba(75, 0, 130, 0.3);
+}
+
+/* ===========================
+   SEÇÃO DE INÍCIO (.comeco)
+   =========================== */
+.comeco {
     color: palevioletred;
-    font-family:amoria;
-    height: 20vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* CORREÇÃO 3: fonte
+                          "amoria" não é nativa do navegador e quebrava o texto caso
+                          não estivesse importada. Substituída por fonte segura. Se
+                          quiser usar Amoria, adicione @font-face no topo do CSS */
+    height: auto;         /* CORREÇÃO 4: era height:20vh — cortava o conteúdo interno
+                             em telas menores. auto deixa a altura se ajustar */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at top,#3c00bf,#050510);
+    background: radial-gradient(circle at top, #3c00bf, #050510);
     border-radius: 60px;
-    /* --- O EFEITO NEON AQUI --- */
-    border: 2px solid #bd7fbb; /* Cor base da borda (ciano neon) */
-        
-    box-shadow: 
-        0 0 10px #a94cf0,      /* Brilho interno/próximo */
-        0 0 20px #a94cf0,      /* Brilho médio */
-        0 0 40px #7000ff,      /* Brilho expandido (puxando para o roxo) */
-        inset 0 0 15px #7000ff; /* Brilho neon para DENTRO da caixa */
+    border: 2px solid #bd7fbb;
+    box-shadow:
+        0 0 10px #a94cf0,
+        0 0 20px #a94cf0,
+        0 0 40px #7000ff,
+        inset 0 0 15px #7000ff;
     padding: 20px;
     margin: 20px;
-    
-    
-    }
-    body{
-        background-color: indigo;
-        color: aquamarine;
-        display:  flex;
-        justify-content: center;
-        align-items:center;
-        height: 100vh;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-        cursor: grab;
-    box-shadow: 
-    00 15px  purple,
-    00 30px white,
-    00 60px green;
-    
-    }
-    
-    input{
-        border-radius: 20px;
-        padding: 10px 20px;
-        border: none;
-    
-    }
-    .palavra-container span{
-        font-size: 2rem;
-        margin: 0 10px;
-        border-bottom:purple;
-    
-    }
-    #btn-tentar{
-        padding: 10px 20px;
-        cursor: wait;
-    
-        transition: 0.3s;
-    
-    }
-    #btn-tentar:hover{
-        background-color: magenta;
-        color: white;
-     
-    }
-    
-    #entrada-letra:focus{
-        border: 2px solid cyan;
-        outline: none;
-    
-    }
-    
-    
-    
-    
-    
+    gap: 12px; /* CORREÇÃO 5: sem gap, os filhos (h1, input, button) ficavam colados */
+}
+
+/* ===========================
+   SEÇÃO DE STATUS (.status)
+   =========================== */
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+/* ===========================
+   ÁREA DA PALAVRA (spans do JS)
+   =========================== */
+
+/* CORREÇÃO 6: o seletor original era ".palavra-container span" mas o HTML usa
+   "#areaJogo span" — por isso os underscores nunca tinham espaçamento visual */
+#areaJogo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+#areaJogo span {
+    font-size: 2rem;
+    margin: 0 6px;
+    min-width: 24px;
+    text-align: center;
+
+    /* CORREÇÃO 7: era border-bottom:purple — faltava o estilo e espessura da borda.
+       Sem "solid" e tamanho, a borda não aparecia */
+    border-bottom: 2px solid purple;
+}
+
+/* ===========================
+   INPUTS
+   =========================== */
+input {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border 0.3s;
+}
+
+/* CORREÇÃO 8: o seletor era ".entrada-letra:focus" mas o elemento no HTML
+   tem id="tentativa", não class="entrada-letra" — o foco nunca funcionava */
+#tentativa:focus,
+#entrada-palavra:focus {
+    border: 2px solid cyan;
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
+#btn-tentar {
+    padding: 10px 20px;
+    cursor: pointer; /* CORREÇÃO 9: era cursor:wait — deixava o cursor como
+                        "carregando" permanentemente, confundindo o usuário */
+    transition: 0.3s;
+    border-radius: 20px;
+    border: none;
+    background: #3c00bf;
+    color: white;
+}
+
+#btn-tentar:hover {
+    background-color: magenta;
+    color: white;
+}
+
+#btn-comecar {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background: #7000ff;
+    color: white;
+    transition: 0.3s;
+}
+
+#btn-comecar:hover {
+    background-color: palevioletred;
+    color: white;
+}
