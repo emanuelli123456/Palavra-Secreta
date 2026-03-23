@@ -8,9 +8,17 @@ justify-content: center;
 align-items: center;
 background: radial-gradient(circle at top,#3c00bf,#050510);
 border-radius: 60px;
-border: 1px solid violet;
+/* --- O EFEITO NEON AQUI --- */
+border: 2px solid #bd7fbb; /* Cor base da borda (ciano neon) */
+    
+box-shadow: 
+    0 0 10px #a94cf0,      /* Brilho interno/próximo */
+    0 0 20px #a94cf0,      /* Brilho médio */
+    0 0 40px #7000ff,      /* Brilho expandido (puxando para o roxo) */
+    inset 0 0 15px #7000ff; /* Brilho neon para DENTRO da caixa */
 padding: 20px;
 margin: 20px;
+
 
 }
 body{
@@ -22,6 +30,10 @@ body{
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     cursor: grab;
+box-shadow: 
+00 15px  purple,
+00 30px white,
+00 60px green;
 
 }
 

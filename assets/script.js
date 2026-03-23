@@ -4,6 +4,9 @@ let guessedLetters = [];
 let displayWord = [];
 let pontuacao = 0;
 
+
+// ELEMENTOS HTML
+
 const displayPalavra = document.getElementById("areaJogo");
 const displayTentativas = document.getElementById("Tentativas");
 const displayPontuacao = document.getElementById("pontuação");
@@ -17,6 +20,7 @@ const btnTentar = document.getElementById("btn-tentar");
 
 
 // INICIAR JOGO
+
 function iniciarJogo(){
 
 secretWord = inputPalavra.value.toUpperCase();
@@ -28,7 +32,6 @@ return;
 
 inputPalavra.value = "";
 
-// corrigido aqui
 displayWord = Array(secretWord.length).fill("_");
 
 attemptsLeft = 6;
@@ -42,8 +45,8 @@ renderWord();
 }
 
 
-
 // MOSTRAR PALAVRA
+
 function renderWord(){
 
 displayPalavra.innerHTML = "";
@@ -52,8 +55,7 @@ displayWord.forEach(letra => {
 
 const span = document.createElement("span");
 
-// espaço só na visualização
-span.innerText = letra + " ";
+span.innerText = letra;
 
 displayPalavra.appendChild(span);
 
@@ -69,6 +71,7 @@ letrasUsadas.innerText = guessedLetters.join(" ");
 
 
 // TENTAR LETRA
+
 function tentarLetra(){
 
 const letra = inputTentativa.value.toUpperCase();
@@ -109,6 +112,7 @@ verificarFim();
 
 
 // VERIFICAR FIM
+
 function verificarFim(){
 
 if(!displayWord.includes("_")){
@@ -117,7 +121,7 @@ alert("Você ganhou!");
 
 }
 
-else if(attemptsLeft === 0){
+if(attemptsLeft === 0){
 
 alert("Você perdeu! A palavra era: " + secretWord);
 
@@ -127,6 +131,7 @@ alert("Você perdeu! A palavra era: " + secretWord);
 
 
 // EVENTOS
+
 btnComecar.addEventListener("click", iniciarJogo);
 
 btnTentar.addEventListener("click", tentarLetra);
